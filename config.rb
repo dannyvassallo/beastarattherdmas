@@ -1,7 +1,7 @@
 # Google analytics
 activate :google_analytics do |ga|
   # Property ID (default = nil)
-  ga.tracking_id = 'UA-72841429-1'
+  ga.tracking_id = 'UA-74644364-1'
 
 end
 

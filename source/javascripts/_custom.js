@@ -65,18 +65,6 @@ $("#contest").validate({
       lettersonly: true,
       minlength: 2
     },
-    // last name
-    'entry.2059930985': {
-      //checks for whitespace
-      required: {
-        depends:function(){
-          $(this).val($.trim($(this).val()));
-          return true;
-        }
-      },
-      lettersonly: true,
-      minlength: 2
-    },
     // email
     'entry.322932457': {
       //checks for whitespace
@@ -92,10 +80,8 @@ $("#contest").validate({
         required: true,
         minAge: 13
     },
-    'entry.1685083969': {
-        number: true,
-        minlength: 10,
-        maxlength: 11
+    'entry.69019987': {
+       required : true
     }
   },
   messages: {
@@ -105,26 +91,13 @@ $("#contest").validate({
       lettersonly: "Letters only in the name fields please.",
       minlength: jQuery.validator.format("At least {0} characters required!"),
     },
-    // last name
-    'entry.2059930985': {
-      required: "Please give your last name.",
-      lettersonly: "Letters only in the name fields please.",
-      minlength: jQuery.validator.format("At least {0} characters required!"),
-    },
     // email
     'entry.322932457': {
       required: "Please give your e-mail address.",
       email: "Please give a valid e-mail address."
     },
-    // birthday
-    'entry.328909515': {
-      required: "You must enter your date of birth",
-      minAge: "You must be at least 13 years old."
-    },
-    'entry.1685083969': {
-      number: "Phone number must be numbers only.",
-      minlength: "Phone numbers must be at least 10 digits.",
-      maxlength: "Phone numbers can be no longer than 11 digits."
+    'entry.69019987': {
+      required : "You must agree to the rules."
     }
   },
   invalidHandler: function(form, validator) {
@@ -138,38 +111,35 @@ $("#contest").validate({
     setTimeout(function(){
       $('#contest').parent().html(successMsg).css('min-height', formH);
     }, 500);
-    setTimeout(function(){
-      $.scrollTo('#thankyou', 1000, { offset: 0, 'axis': 'y' });
-    }, 600);
   }
 });
 
-$("#age-gate").validate({
-  focusInvalid: false,
-  rules: {
-    birthday: {
-      required: true,
-      minAge: 13
-    }
-  },
-  messages: {
-    birthday: {
-      required: "You must enter your date of birth",
-      minAge: "You must be at least 13 years old."
-    }
-  },
-  invalidHandler: function(form, validator) {
-    growlz();
-  },
-  success: "valid",
-  submitHandler: function() {
-    $('#gate').fadeOut( 500 );
-    setTimeout(function(){
-      $('#content').fadeIn();
-      $('#footer').fadeIn();
-    }, 500);
-  }
-});
+// $("#age-gate").validate({
+//   focusInvalid: false,
+//   rules: {
+//     birthday: {
+//       required: true,
+//       minAge: 13
+//     }
+//   },
+//   messages: {
+//     birthday: {
+//       required: "You must enter your date of birth",
+//       minAge: "You must be at least 13 years old."
+//     }
+//   },
+//   invalidHandler: function(form, validator) {
+//     growlz();
+//   },
+//   success: "valid",
+//   submitHandler: function() {
+//     $('#gate').fadeOut( 500 );
+//     setTimeout(function(){
+//       $('#content').fadeIn();
+//       $('#footer').fadeIn();
+//     }, 500);
+//   }
+// });
 
 // reload the page
 

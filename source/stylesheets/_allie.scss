@@ -43,6 +43,12 @@
   margin: 0 auto;
 }
 
+.checkbox-wrap{
+  label.error{
+    display: none !important;
+  }
+}
+
 .error{
   font-size: 12px !important;
   color: red !important;

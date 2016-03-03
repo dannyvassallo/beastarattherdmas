@@ -28,6 +28,21 @@
   }
 }
 
+.rdmalogo{
+  max-width: 400px;
+  width: 100%;
+}
+
+.beastar, .prizes{
+  max-width: 600px;
+  width: 100%;
+}
+
+#contest{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .error{
   font-size: 12px !important;
   color: red !important;
@@ -47,7 +62,7 @@
 .contest-area{
   background-image: url('https://s3.amazonaws.com/myfangate.com/beastar/purplebg.jpg');
   background-size: cover;
-  padding-top: 15%;
+  padding-top: 50px;
 }
 
 .promo{

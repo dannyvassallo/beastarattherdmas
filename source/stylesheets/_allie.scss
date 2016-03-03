@@ -1,18 +1,47 @@
-@media only screen and (max-width : 1200px) {
-  .neg-marg{
-    margin-top: -8%;
+@media only screen and (max-width : 768px) {
+  .disc{
+    font-size: 12px;
   }
-  .powered-by{
-    margin-bottom: 15% !important;
+  .entries{
+    font-size: 20px;
+  }
+  label{
+    font-size: 20px;
+  }
+  .smaller-label{
+    font-size: 16px;
   }
 }
-@media only screen and (min-width : 1200px) {
-  .neg-marg{
-    margin-top: -4%;
+
+@media only screen and (max-width : 767px) {
+  .disc{
+    font-size: 8px;
   }
-  .powered-by{
-    margin-bottom: 8% !important;
+  .entries{
+    font-size: 12px;
   }
+  label{
+    font-size: 12px;
+  }
+  .smaller-label{
+    font-size: 10px;
+  }
+}
+
+.error{
+  font-size: 12px !important;
+  color: red !important;
+  text-shadow: 1px 1px 0px black;
+}
+
+.neg-marg{
+  margin-top: -20px;
+}
+
+.powered-by{
+  max-width: 150px;
+  margin: 0 auto 50px auto !important;
+  width: 100%;
 }
 
 .contest-area{
@@ -41,10 +70,6 @@
 .header{
   background-image: url('https://s3.amazonaws.com/myfangate.com/beastar/bluebg.jpg');
   background-size: cover;
-}
-
-.smaller-label{
-  font-size: 10px;
 }
 
 .entries{
@@ -159,7 +184,6 @@ a.rules{
   .disc{
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 8px;
   }
   .submit-wrap{
     padding: 2% 0;

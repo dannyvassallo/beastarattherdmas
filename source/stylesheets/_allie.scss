@@ -49,6 +49,10 @@
   }
 }
 
+.thank-you-img{
+  margin-bottom: 40px;
+}
+
 .error{
   font-size: 12px !important;
   color: red !important;
@@ -236,15 +240,17 @@ a.rules{
 // }
 
 .again-button, .gate-btn{
+  box-shadow: 0 0 10px #e808b1;
   background-color: transparent;
-  border: 6px solid white;
+  border: 6px solid #e808b1;
   border-radius: 12px;
   text-transform: uppercase;
-  color: white;
+  color: #e808b1;
   font-size: 30px;
-  letter-spacing: -2px;
-  font-family: 'TwCenMT-Bold';
+  letter-spacing: 1px;
+  font-family: 'PlacardMT-BoldCondensed';
   padding: 0 14px;
+  margin-bottom: 40px;
 }
 
 #thankyou{

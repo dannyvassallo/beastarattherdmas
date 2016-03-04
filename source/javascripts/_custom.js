@@ -21,7 +21,7 @@ function growlz(){
 
 
 // successMsg Constructor
-var successMsg = "<div id=\"thankyou\" class=\"col-xs-12 text-center\"><h2 class=\"thanks\">Thank you for entering!</h2><p>Would you like to enter again?</p><button class=\"again-button\">Enter Again</div></div>"
+var successMsg = "<div id=\"thankyou\" class=\"col-xs-12 text-center\"><a href=\"http://starstable.com\" target=\"_blank\"><img class=\"full-w thank-you-img\" src=\"https://s3.amazonaws.com/myfangate.com/beastar/thankyoucode.png\"></a><button class=\"again-button\">Enter Again</div></div><p class=\"entries\">Unlimited entries through March 24, 2016</p><p class=\"text-center\"><a class=\"rules\" href=\"http://www.radiodisneyapp.com/rules\" target=\"_blank\">Official Rules</a></p>";
 
 // dateparse for safari compatibility
 function parseDate(input, format) {

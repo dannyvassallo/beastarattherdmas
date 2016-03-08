@@ -102,11 +102,13 @@ $("#contest").validate({
   },
   invalidHandler: function(form, validator) {
     growlz();
+    _gaq.push(['_trackEvent', 'click', 'Validation Error']);
   },
   success: "valid",
   submitHandler: function(form) {
     formH = $('#contest').height();
     form.submit();
+    _gaq.push(['_trackEvent', 'click', 'Submitted an Entry']);
     $.growl.notice({ message: "Thanks! We've received your entry." });
     setTimeout(function(){
       $('#contest').parent().html(successMsg).css('min-height', formH);
@@ -168,4 +170,11 @@ $('.datepicker').on('focus', function(){
 
 $('.datepicker').on('blur', function(){
   $("#contest :input").prop("disabled", false);
+});
+
+
+$(function(){
+  $('body').on('click','.thank-you-img', function(){
+    _gaq.push(['_trackEvent', 'click', 'Clicked StarStable Link']);
+  });
 });

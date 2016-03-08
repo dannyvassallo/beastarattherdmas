@@ -31,8 +31,8 @@ set :images_dir, 'images'
 set :fonts_dir,  'fonts-folder'
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
-  set :debug_assets, true
+  # activate :livereload
+  # set :debug_assets, true
   activate :minify_css
   activate :minify_html
   activate :minify_javascript

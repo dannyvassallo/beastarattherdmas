@@ -184,3 +184,7 @@ lorem.image('300x400', :random_color => true)
 lorem.image('300x400', :text => 'blah')
   #=> http://placehold.it/300x400&text=blah
 ```
+
+
+
+

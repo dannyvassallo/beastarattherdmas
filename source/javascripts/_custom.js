@@ -1,7 +1,6 @@
-
-
 // Datepicker
 $(document).ready(function(){
+  $('.starstable-pics').hide();
   $("#dtBox").DateTimePicker({
     dateFormat: "mm-dd-yyyy"
   });
@@ -21,7 +20,7 @@ function growlz(){
 
 
 // successMsg Constructor
-var successMsg = "<div id=\"thankyou\" class=\"col-xs-12 text-center\"><a href=\"http://starstable.com\" target=\"_blank\"><img class=\"full-w thank-you-img\" src=\"https://s3.amazonaws.com/myfangate.com/beastar/thankyoucode.png\"></a><button class=\"again-button\">Enter Again</div></div><p class=\"entries\">Unlimited entries through March 24, 2016</p><p class=\"text-center\"><a class=\"rules\" href=\"http://www.radiodisneyapp.com/rules\" target=\"_blank\">Official Rules</a></p>";
+var successMsg = "<div id=\"thankyou\" class=\"col-xs-12 text-center\"><a href=\"http://starstable.com\" target=\"_blank\"><img class=\"full-w thank-you-img\" src=\"https://s3.amazonaws.com/myfangate.com/beastar/thankyoucode.png\"></a><button class=\"again-button\">Enter Again</div></div><p class=\"entries\">Unlimited entries through March 24, 2016</p>";
 
 // dateparse for safari compatibility
 function parseDate(input, format) {
@@ -108,10 +107,11 @@ $("#contest").validate({
   submitHandler: function(form) {
     formH = $('#contest').height();
     form.submit();
+    $('.starstable-pics').show();
     _gaq.push(['_trackEvent', 'click', 'Submitted an Entry']);
     $.growl.notice({ message: "Thanks! We've received your entry." });
     setTimeout(function(){
-      $('#contest').parent().html(successMsg).css('min-height', formH);
+      $('#contest').parent().html(successMsg);
     }, 500);
   }
 });

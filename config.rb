@@ -33,9 +33,9 @@ set :fonts_dir,  'fonts-folder'
 configure :development do
   # activate :livereload
   # set :debug_assets, true
-  activate :minify_css
-  activate :minify_html
-  activate :minify_javascript
+  # activate :minify_css
+  # activate :minify_html
+  # activate :minify_javascript
 end
 
 ###
